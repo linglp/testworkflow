@@ -7,14 +7,7 @@ name: Create and publish a Docker image
 on:
   push:
     tags:
-      - v*'
-  workflow_dispatch:
-    inputs:
-      tags:
-        description: 'tag version number'
-        required: true
-
-
+      - '*'
 env:
   REGISTRY: ghcr.io
   IMAGE_PATH: ghcr.io/${{ github.repository }}
